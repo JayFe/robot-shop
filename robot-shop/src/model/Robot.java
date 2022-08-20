@@ -5,7 +5,7 @@ public interface Robot {
 
   String getName();
 
-  String getSerialNumber();
+  Long getSerialNumber();
 
   double getPrice();
 

@@ -1,5 +1,8 @@
 package model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class SteamPunkPizzaBot implements Robot {
 
   @Override
@@ -9,7 +12,7 @@ public class SteamPunkPizzaBot implements Robot {
   }
 
   @Override
-  public String getSerialNumber() {
+  public Long getSerialNumber() {
     // TODO Auto-generated method stub
     return null;
   }

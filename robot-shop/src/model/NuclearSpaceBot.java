@@ -1,29 +1,49 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class NuclearSpaceBot implements Robot {
 
-  @Override
-  public String getName() {
-    // TODO Auto-generated method stub
-    return null;
+  private static Double price = 1000.0;
+  private static PowerSource powerSource = PowerSource.NUCLEAR;
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long serialNumber;
+  private String name;
+
+
+  public NuclearSpaceBot(String name) {
+    this.name = name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   @Override
-  public String getSerialNumber() {
-    // TODO Auto-generated method stub
-    return null;
+  public String getName() {
+    return this.name;
+  }
+
+  @Override
+  public Long getSerialNumber() {
+    return this.serialNumber;
   }
 
   @Override
   public PowerSource getPowerSource() {
-    // TODO Auto-generated method stub
-    return null;
+    return powerSource;
   }
 
   @Override
   public double getPrice() {
-    // TODO Auto-generated method stub
-    return 0;
+    return price;
   }
 
 }
